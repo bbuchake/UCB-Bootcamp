@@ -19,7 +19,7 @@ with open(budget_data_path, "r") as budget_data_file:
     next(budget_data_reader) #Skip header
     #Calculate total months which is same as total number of rows in the file
     #total_months = len(list(budget_data_reader)) - *** When I ran this line, it worked but then the reader finished 
-    #reading to the end of the line and the 'for' loop did not work
+    #reading and the 'for' loop did not work
     for budget_data_row in budget_data_reader:
         #Calculate total revenue
         total_months = total_months + 1
