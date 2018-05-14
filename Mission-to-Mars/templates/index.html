@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars News</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container text-center">
+    
+    <div class="jumbotron">
+      <div class="container">
+          <h1>Mission to Mars</h1>
+          <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Mars Data</a>    
+      </div>
+    </div>
+
+      <div>
+        <h2 class="text-left">Latest Mars News</h2>
+        <h4 class="text-left">{{mars.news_title}}</h4>
+        <p class="text-left">{{mars.news_p}}</p>
+      </div>
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        
+        <img src="{{mars.featured_image_url}}" class="img-responsive" alt="Image">
+        <br>
+      </div>
+      
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" style="border: 2px solid black">
+        <h4>Martian Weather</h4>
+        <p>{{mars.mars_weather}}</p>
+      <br>
+      </div>
+
+      
+      <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4" style="border: 2px solid black">
+        <h4>Mars Facts</h4>
+          {{mars.mars_facts_html|safe}}
+      </div>
+      
+      
+    </div>
+    
+
+  </div>
+
+  
+  <div class="container">
+  
+    <div class="row">
+    
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h2>{{mars.hemisphere_image_urls[0].title}}</h2>
+          <img src="{{mars.hemisphere_image_urls[0].img_url}}" class="img-responsive" alt="">
+        </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h2>{{mars.hemisphere_image_urls[1].title}}</h2>
+        <img src="{{mars.hemisphere_image_urls[1].img_url}}" class="img-responsive" alt="">
+        </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h2>{{mars.hemisphere_image_urls[2].title}}</h2>
+          <img src="{{mars.hemisphere_image_urls[2].img_url}}" class="img-responsive" alt="">
+        </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h2>{{mars.hemisphere_image_urls[3].title}}</h2>
+          <img src="{{mars.hemisphere_image_urls[3].img_url}}" class="img-responsive" alt="">
+        </div>
+
+  </div>
+  
+</div>
+</body>
+
+</html>
